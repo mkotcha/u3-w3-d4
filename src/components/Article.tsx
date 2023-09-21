@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import { IArticle } from "../interfaces/IArticle";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import ArticleCard from "./ArticleCard";
 
 const Article = () => {
   const [article, setArticle] = useState<IArticle | null>(null);
@@ -25,7 +26,11 @@ const Article = () => {
 
   return (
     <>
-      <Container>{article && <h1>{article.title}</h1>}</Container>
+      {article && (
+        <div key={article.id}>
+          <ArticleCard article={article} />
+        </div>
+      )}
     </>
   );
 };

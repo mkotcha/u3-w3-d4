@@ -26,9 +26,10 @@ const Articles = () => {
     <>
       <Container>
         <h2 className="display-3">News</h2>
-
         {articles.map(article => (
-          <ArticleCard article={article} />
+          <div key={article.id}>
+            <ArticleCard article={article} />
+          </div>
         ))}
       </Container>
     </>
