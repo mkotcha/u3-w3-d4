@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import { IArticle } from "../interfaces/IArticle";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
@@ -22,7 +21,7 @@ const Article = () => {
       }
     };
     fetchArticle();
-  }, []);
+  }, [params.id]);
 
   return (
     <>

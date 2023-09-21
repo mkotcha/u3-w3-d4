@@ -9,7 +9,6 @@ interface ArticleProps {
 const ArticleCard = ({ article }: ArticleProps) => {
   const published = new Date(article.published_at).toLocaleDateString();
   const location = useLocation();
-  console.log(location);
 
   let externalLink = false;
 

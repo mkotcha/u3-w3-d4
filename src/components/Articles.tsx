@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { IArticle } from "../interfaces/IArticle";
 import { Container } from "react-bootstrap";
-import Article from "./ArticleCard";
 import ArticleCard from "./ArticleCard";
 
 const Articles = () => {
